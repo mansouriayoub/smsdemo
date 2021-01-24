@@ -35,6 +35,10 @@ span,
 a {
   display: inline-block; }
 
+.main-btn{
+    color: white !important;
+  }
+
 h1,
 h2,
 h3,
