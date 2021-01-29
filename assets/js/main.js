@@ -15,10 +15,10 @@ $(function () {
         var scroll = $(window).scrollTop();
         if (scroll < 20) {
             $(".navbar-area").removeClass("sticky");
-            $(".navbar .navbar-brand img").attr("src", "assets/images/samo-brico-logo-svg.svg");
+            $(".navbar .navbar-brand img").attr("src", "assets/images/samo-logo-rounded2.svg");
         } else {
             $(".navbar-area").addClass("sticky");
-            $(".navbar .navbar-brand img").attr("src", "assets/images/samo-brico-logo-svg.svg");
+            $(".navbar .navbar-brand img").attr("src", "assets/images/samo-logo-rounded2.svg");
         }
     });
 
