@@ -2,10 +2,11 @@
   <defs>
     <style>
       .cls-1 {
-        fill: none;
+        fill: #fff;
         stroke-linejoin: round;
         stroke-width: 12px;
         stroke: url(#linear-gradient);
+        filter: url(#filter);
       }
 
       .cls-2, .cls-3, .cls-4 {
@@ -28,6 +29,11 @@
       <stop offset="0" stop-color="#58a0c2"/>
       <stop offset="1" stop-color="#004360"/>
     </linearGradient>
+    <filter id="filter" x="8" y="16" width="643" height="643" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
     <linearGradient id="linear-gradient-2" x1="84.813" y1="54.549" x2="415.25" y2="352.076" gradientUnits="userSpaceOnUse">
       <stop offset="-0.13" stop-color="#01567f"/>
       <stop offset="0.526" stop-color="#01567f"/>
@@ -47,7 +53,10 @@
       <stop offset="1" stop-color="#73c6ff"/>
     </linearGradient>
   </defs>
-  <circle id="o" class="cls-1" cx="329.5" cy="337.5" r="313.5"/>
+  <g style="fill: #fff; filter: url(#filter)">
+    <circle id="o" class="cls-1" cx="329.5" cy="337.5" r="313.5" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#o" style="stroke: url(#linear-gradient); filter: none; fill: none"/>
   <path class="cls-2" d="M415.254,50.429l-0.764,144.88s-160.092-7.633-191.756,6.862c-51,23.349-89.8,60.271-85.564,153.268,0.568,12.466-114.934-136.917-4.584-247.058C198.4,42.7,257.113,51.954,257.113,51.954Z"/>
   <path class="cls-3" d="M248.042,195.309c-20.217,10.408-38.631,59.523,9.208,73.214,73.576-1.44,159.613,2.312,159.613,2.312s62.014,6.024,92.359,40.377c15,40.95-5.644,96.392-16.807,112.854-32.3,47.634-80.981,55.664-80.981,55.664s23.527-8.6,19.863-36.6c-4.205-32.148-42.826-34.342-42.826-34.342s-51.436-2.27-111.9.075C215.591,411.226,171.625,388.893,135.9,356,125.123,214.809,227.76,198.961,248.042,195.309Z"/>
   <path class="cls-4" d="M418.31,477.443c-11.776,3.829-316.282,5.337-316.282,5.337L241.07,623.085s153.1-.146,175.712.762,78.779-27.659,87.856-35.838,58.5-39.657,67.993-128.867c10.33-97.1-62.645-147.167-62.645-147.167S539.716,437.966,418.31,477.443Z"/>
