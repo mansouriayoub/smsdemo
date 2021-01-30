@@ -2,9 +2,9 @@
   <defs>
     <style>
       .cls-1 {
+        fill: none;
         stroke-linejoin: round;
         stroke-width: 12px;
-        fill: url(#radial-gradient);
         stroke: url(#linear-gradient);
       }
 
@@ -24,11 +24,6 @@
         fill: url(#linear-gradient-4);
       }
     </style>
-    <radialGradient id="radial-gradient" cx="329.5" cy="337.5" r="313.5" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="0.192" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#fff"/>
-    </radialGradient>
     <linearGradient id="linear-gradient" x1="329.5" y1="651" x2="329.5" y2="24" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#58a0c2"/>
       <stop offset="1" stop-color="#004360"/>
