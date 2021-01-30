@@ -15,13 +15,13 @@ $(function () {
       $(".navbar-area").removeClass("sticky")
       $(".navbar .navbar-brand img").attr(
         "src",
-        "assets/images/samo-logo-rounded-final-1.svg"
+        "assets/images/samo-logo-rounded.svg"
       )
     } else {
       $(".navbar-area").addClass("sticky")
       $(".navbar .navbar-brand img").attr(
         "src",
-        "assets/images/samo-logo-rounded-final-1.svg"
+        "assets/images/samo-logo-rounded.svg"
       )
     }
   })
