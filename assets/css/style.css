@@ -24,7 +24,7 @@
 
 -----------------------------------------------------------------------------------*/
 /*===========================
-     01.SVG LOGO css 
+     00.SVG LOGO css 
 ===========================*/
 #logo_svg{
   width: 40px;
@@ -926,7 +926,11 @@ p {
     width: 100%; }
   @media (max-width: 767px) {
     .about-shape-1 {
-      display: none; } }
+      display: none; } 
+    .spanColor {
+      color: blue;
+    }
+  }
 
 .about-shape-2 {
   position: absolute;
