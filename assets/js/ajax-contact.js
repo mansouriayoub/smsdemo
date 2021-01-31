@@ -13,7 +13,7 @@ $(function() {
 
 		// Serialize the form data.
 		var formData = $(form).serialize();
-
+		$('.submit').attr('disabled',true);
 		// Submit the form using AJAX.
 		$.ajax({
 			type: 'POST',
@@ -21,27 +21,25 @@ $(function() {
 			data: formData
 		})
 		.done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-			$(formMessages).removeClass('error');
-			$(formMessages).addClass('success');
-
-			// Set the message text.
-			$(formMessages).text(response);
+			
+			$(formMessages).removeClass('alert-danger');
+			$(formMessages).addClass('alert-success');
+			$(formMessages).text("Votre message a été bien envoyé");
+			$(formMessages).show();
 
 			// Clear the form.
 			$('#contact-form input,#contact-form textarea').val('');
+			$('#contact-form').trigger("reset");
+			$('.submit').attr('disabled',false);
 		})
 		.fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('success');
-			$(formMessages).addClass('error');
-
-			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
-			}
+			
+			$(formMessages).removeClass('alert-success');
+			$(formMessages).addClass('alert-danger');
+			$(formMessages).text("Erreur d'envoi de message");
+			$(formMessages).show();
+			
+			$('.submit').attr('disabled',false);
 		});
 	});
 

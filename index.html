@@ -208,9 +208,9 @@
           <div class="col-lg-10">
             <div class="section-title text-center pb-40">
               <div class="line m-auto"></div>
-              <h3 class="title">
+              <h5 class="title">
                 <!-- Clean and simple design, <span> Comes with everything you need to get started!</span> -->
-                <span>
+                <small>
                   Nous sommes une société spécialisée dans le développement des
                   systèmes de gestion commerciale et la création de logiciels
                   spécifiques, dédiés à votre métier. Notre entreprise a fondé
@@ -222,8 +222,8 @@
                   dans les règles de l’art votre application. À votre écoute, un
                   chef de projet expérimenté vous accompagne en suivant, étape
                   par étape, une méthodologie de management de projet éprouvée.
-                </span>
-              </h3>
+                </small>
+              </h5>
             </div>
             <!-- section title -->
           </div>
@@ -235,6 +235,7 @@
               class="single-services text-center mt-30 wow fadeIn"
               data-wow-duration="1s"
               data-wow-delay="0.1s"
+              style="min-height:463px;"
             >
               <div class="services-icon">
                 <img
@@ -252,7 +253,7 @@
               <div class="services-content mt-30">
                 <h4 class="services-title"><a href="#">Simple</a></h4>
                 <p class="text">
-                  Parce qu’efficacité rime avec plaisir d’utilisation, le logiciel de Gestion Commerciale rend simple d’accès les fonctionnalités les plus complexes.
+                  Parce que l'efficacité rime avec plaisir d'utilisation, le logiciel de Gestion Commerciale rend simple d’accès les fonctionnalités les plus complexes.
                 </p>
               </div>
             </div>
@@ -263,6 +264,7 @@
               class="single-services text-center mt-30 wow fadeIn"
               data-wow-duration="1s"
               data-wow-delay="0.1s"
+              style="min-height:463px;"
             >
               <div class="services-icon">
                 <img
@@ -280,7 +282,7 @@
               <div class="services-content mt-30">
                 <h4 class="services-title"><a href="#">Solide</a></h4>
                 <p class="text">
-                  D’une souplesse inégalée, le logiciel de Gestion Commerciale s’ajuste à votre métier, vos facteurs clés de succès et à votre organisation opérationnelle, à l’affichage comme en saisie.
+                  D'une souplesse inégalée, le logiciel de Gestion Commerciale s'ajuste à votre métier, vos facteurs clés de succès et à votre organisation opérationnelle, à l’affichage comme en saisie.
                 </p>
               </div>
             </div>
@@ -291,6 +293,7 @@
               class="single-services text-center mt-30 wow fadeIn"
               data-wow-duration="1s"
               data-wow-delay="0.1s"
+              style="min-height:463px;"
             >
               <div class="services-icon">
                 <img
@@ -546,13 +549,12 @@
                     <h3 class="title">Entrer en contact</h3>
                   </div>
                   <div class="contact-form form-style-four mt-15">
-                    <!-- <div class="alert alert-success" role="alert">
-                                        Your message sent!
-                                    </div> -->
+                    <div class="alert form-message" style="display: none;"  role="alert">Your message sent!</div>
                     <form
+                      action="/assets/php/contactMail.php"
                       name="contactForm"
+                      id="contact-form"
                       method="post"
-                      action="<?php //echo($_SERVER['PHP_SELF']);?>"
                     >
                       <div class="row">
                         <div class="col-md-6">
@@ -600,18 +602,9 @@
                           </div>
                           <!-- form input -->
                         </div>
-                        <!-- <div class="col-md-6">
-                                                <div class="form-input mt-15">
-                                                    <label>Sujet</label>
-                                                    <div class="input-items default">
-                                                        <i class="lni-bubble"></i>
-                                                        <input type="text" placeholder="... ... ...">
-                                                    </div>
-                                                </div> form input
-                                            </div> -->
                         <div class="col-md-6">
                           <div class="form-input mt-15">
-                            <label for="demande">Choisir votre besoin</label>
+                            <label for="demande">Choisir votre besoin <i class="fa fa-question-circle-o"></i></label>
                             <div class="input-items default">
                               <i class="lni-choice"></i>
                               <select
@@ -620,8 +613,9 @@
                                 name="demande"
                                 id="demande"
                               >
-                                <option value="crm">SMS CRM</option>
-                                <option value="rcm">SMS RCM</option>
+                                <option value="crm">SMS CRM (Gestion commerciale)</option>
+                                <option value="rcm">SMS RCM (Rental Cars Management)</option>
+                                <option value="developpement">Développement spécifique</option>
                                 <option value="autre">Autre</option>
                               </select>
                             </div>
@@ -647,7 +641,7 @@
                             <div class="input-form rounded-buttons">
                               <button
                                 name="submit"
-                                class="main-btn rounded-three"
+                                class="submit main-btn rounded-three"
                                 type="submit"
                               >
                                 ENVOYER LE MESSAGE
